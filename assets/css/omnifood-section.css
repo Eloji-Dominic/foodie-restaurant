@@ -1,0 +1,97 @@
+/* Header */
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 4%;
+  background: var(--white);
+  color: var(--dark-orange);
+  border-block-end: 1px solid var(--champagne-pink_20);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+  transition: var(--transition-1);
+}
+.header .btn{
+  display: none;
+}
+.header.active{
+  color: var(--white);
+  background-color: var(--dark-orange);
+  box-shadow: var(--shadow-1);
+  animation: slideIn 0.5s ease-out forwards;
+}
+@keyframes slideIn{
+  0%{transform: translateY(-100%);}
+  100%{transform: translateY(0);}
+}
+
+.header.active ion-icon{
+  color: var(--white);
+}
+.header .menu-btn{
+  font-size: 2.4rem;
+  color: var(--dark-orange);
+  transition: var(--transition-2);
+}
+.header .menu-btn .close-btn{
+  display: none;
+}
+.header .menu-btn.open .close-btn{
+  display: block;
+}
+.header .menu-btn.open .open-btn{
+  display: none;
+}
+.main-nav{
+  z-index: 3;
+  padding-inline: 0;
+  position: absolute;
+  top: 100%;
+  background: var(--white);
+  width: 90%;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  color: var(--dark-orange);
+  overflow: hidden;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: var(--transition-1);
+}
+.main-nav-list{
+  padding: 12px 14px;
+}
+.main-nav-list .main-nav-link{
+  margin-block: 14px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  transition: var(--transition-1);
+}
+.main-nav-list .main-nav-link.nav-cta{
+  display: block;
+  text-align: center;
+  padding: 12px 24px;
+  border-radius: 6px;
+  color: #fff;
+  background-color: var(--dark-orange);
+}
+.main-nav.active{
+  max-height: 400px;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+

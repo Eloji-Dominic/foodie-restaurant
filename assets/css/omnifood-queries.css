@@ -47,8 +47,48 @@
     width: 60%;
     margin-inline: auto;
   }
+  /* Meal */
+  .meal-content{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 0 15px;
+  }
+  .meal-content .diets.diets-1{
+    grid-column: span 2;
+  }
+  /* Testimonials */
+  .testimonials .testimonial-content,.testimonials .gallery-content{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .testimonials .testimonial-top-content{
+    grid-column: span 2;
+  }
+  .testimonial-content .testimonial{
+    text-align: left;
+  }
+  .testimonial .testimonial-img{
+    margin-inline-start: 0;
+  }
+  /* Pricing */
+  .pricing-main-content{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .feature-main-content{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  /* CTA */
+  .cta{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .cta-text-box h2, .cta-text-box .cta-text{
+    text-align: left;
+  }
 }
 @media (min-width: 992px){
+  /* Header */
   .header{
     padding-inline: 2%;
   }
@@ -61,7 +101,7 @@
   }
   .main-nav-list .main-nav-link.nav-cta{
     all: unset;
-    font-size:  var(--fs-4);
+    font-size: var(--fs-4);
     font-weight: var(--fw-500);
   }
   .main-nav-list{
@@ -83,9 +123,13 @@
   .hero-text-box .btn{
     margin-inline-start: 0;
   }
+  .btn{
+    font-size: 18px;
+  }
   .delivered-meals .delivered-imgs{
     justify-content: flex-start;
   }
+  /* Features */
   .featured .logos::-webkit-scrollbar{
     display: none;
   }
@@ -93,16 +137,32 @@
     padding-block-end: 0;
   }
   .featured .logos img{
-    min-width: 15%;
+    min-width: 20%;
+    height: 60px;
   }
+  /* Meals */
+  .meal{
+    height: auto;
+  }
+  .meal-content{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    grid-auto-rows: minmax(300px, auto);
+    align-items: flex-start;
+  }
+  .meal-content .diets.diets-1{
+    grid-column: auto;
+  }
+  .diets{
+    padding-block-start: 0;
+  }
+  /* Steps */
   .step-text-box {text-align: left;}
+  .step-number{font-size: 32px;}
   .step-box{
     flex-direction: row-reverse;
     gap: 50px;
     margin-block: 80px;
-    max-width: 992px;
-    width: 100%;
-    margin-inline: auto;
   }
   .step-img-box img{
     width: 350px;
@@ -113,32 +173,94 @@
   .featured{
     padding: 40px 4%;
   }
-}
+  /* Testimonials */
+  .testimonials{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: center;
+    margin-block-start: 20px;
+  }
+  .testimonials .gallery-content{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    height: 500px;
+  }
+  .gallery-content .gallery-item img{
+    height: 100%;
+  }
+  .testimonials .testimonial-top-content{
+    grid-column: span 2;
+    text-align: left;
+  }
+  .testimonial .testimonial-img{
+    width: 80px;
+    border: 4px solid var(--dark-orange);
+  }
+  .testimonial-content .testimonial{
+    gap: 10px;
+  }
 
-@media (min-width: 1440px){
-  :root{
-    --fs-4: 2rem;
-    --fs-5: 2rem;
+  /* Pricing */
+  .pricing-main-content{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    max-width: 800px;
+    margin-inline: auto;
   }
-  /* featured */
-  .featured .logos::-webkit-scrollbar{
-    display: none;
+  .feature-main-content{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
   }
-  .featured .logos{
-    padding-block-end: 0;
+  /* footer */
+  .footer{
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+    padding-block-end: 20px;
   }
-  .featured .logos img{
-    min-width: 15%;
+}
+@media (min-width: 1200px){
+  /* CTA */
+  .cta{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: flex-start;
+    max-width: 1100px;
+    max-height: 500px;
+    margin-inline: auto;
   }
+  .cta-form .btn{
+    all: unset;
+    align-self: flex-end;
+    background: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--dark-orange);
+  }
+  .cta-form{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: center;
+  }
+  .cta-text-box{
+    gap: 80px;
+    padding: 35px;
+  }
+  /* footer */
+  .footer{
+    gap: 60px;
+    padding-inline: 2%;
+  }
+  /* steps */
   .step-box{
     flex-direction: row-reverse;
     gap: 80px;
-    margin-block: 100px;
-    max-width: 1440px;
-    width: 100%;
-    margin-inline: auto;
+    margin-block: 60px;
   }
   .step-img-box img{
-    width: 400px;
+    width: 350px;
+  }
+  /* Testimonials */
+  .testimonials{
+    gap: 80px;
   }
 }

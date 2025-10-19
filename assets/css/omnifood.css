@@ -48,7 +48,7 @@
 }
 
 
-*,*::before,*::after{
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -82,14 +82,14 @@ ion-icon{
 address{font-style: normal;}
 html{
   font-family: var(--ff-roboto);
-  font-size: 16px;
+  /* font-size: 16px; */
   scroll-behavior: smooth;
 }
 body{
   background-color: var(--white);
   color: var(--sonic-silver);
-  font-size: 1.2rem;
-  line-height: 1.6;
+  /* font-size: 1.2rem; */
+  /* line-height: 1.6; */
   overflow-x: hidden;
 }
 /* body.active{overflow: hidden;} */
@@ -111,7 +111,7 @@ body{
   border-radius: 12px;
   color: var(--white);
   padding: 14px;
-  font-size: var(--fs-5);
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -186,15 +186,8 @@ body{
   0%{transform: translateY(100%);}
   100%{transform: translateY(0);}
 }
-.action-bg .action-btn{
-  background: var(--dark-orange);
-  padding: 12px;
-  width: max-content;
-  width: 100%;
-  text-align: center;
-  color: var(--white);
+.action-bg .btn{
   margin-inline: auto;
   font-size: 18px;
-  font-weight: 600;
-  border-radius: 10px;
+  font-weight: var(--fw-600);
 }

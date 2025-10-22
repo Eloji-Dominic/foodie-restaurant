@@ -128,12 +128,19 @@ body{
   transition: var(--transition-2);
 }
 
+.preloader img{
+  position: absolute;
+  width: 50px;
+  animation: scalerBurger 0.8s ease infinite;
+}
+
 .preloader .circle{
   background: transparent;
   border: 6px solid var(--white);
   border-radius: 50%;
   width: 50px;
   height: 50px;
+  padding: 40px;
   border-block-start-color: transparent;
   animation: rotate360 1s ease infinite;
 }
@@ -146,6 +153,10 @@ body{
 @keyframes rotate360 {
   0%{transform: rotate(0);}
   100%{transform: rotate(360deg);}
+}
+@keyframes scalerBurger{
+  0%{transform: scale(0.7);}
+  100%{transform: scale(1.05);}
 }
 .overlay{
   position: fixed;
